@@ -1,0 +1,10 @@
+test1 8
+DOOP 1
+DOOP 2
+BLOCK 3
+LOOP 10
+  DOOP 5
+  BLOCK 7
+END
+HALT
+

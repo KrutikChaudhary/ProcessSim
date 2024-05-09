@@ -1,0 +1,6 @@
+test1 4
+LOOP 3
+  BLOCK 3
+END
+HALT
+

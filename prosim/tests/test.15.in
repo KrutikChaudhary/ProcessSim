@@ -1,0 +1,8 @@
+test1 6
+LOOP 4
+  LOOP 3
+  DOOP 1
+  END
+END
+HALT
+

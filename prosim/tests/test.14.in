@@ -1,0 +1,7 @@
+test1 5
+LOOP 4
+  LOOP 3
+  END
+END
+HALT
+

@@ -1,0 +1,7 @@
+00000: BLOCK
+00003: HALT
+
+DOOP count : 0
+DOOP time  : 0
+BLOCK count: 1
+BLOCK time : 3

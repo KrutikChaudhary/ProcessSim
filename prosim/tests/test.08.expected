@@ -1,0 +1,9 @@
+00000: BLOCK
+00003: BLOCK
+00006: BLOCK
+00009: HALT
+
+DOOP count : 0
+DOOP time  : 0
+BLOCK count: 3
+BLOCK time : 9

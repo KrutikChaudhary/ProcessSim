@@ -1,0 +1,16 @@
+test1 14
+LOOP 4
+  DOOP 2
+  LOOP 3
+    BLOCK 3
+    DOOP 1
+  END
+  BLOCK 5
+  LOOP 5
+    BLOCK 1
+    DOOP 9
+  END
+  BLOCK 5
+END
+HALT
+
