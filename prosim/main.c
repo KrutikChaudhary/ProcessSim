@@ -10,6 +10,7 @@ typedef struct{
 typedef struct{
     int index;
     int remainingIterations;
+    int currDeviation;
 }loopReference;
 
 typedef struct {
@@ -91,34 +92,50 @@ int main() {
             loopReference reference;
             reference.index = i;
             reference.remainingIterations=primitives[i].ticks;
+            reference.currDeviation=1;
             push(&s,reference);
             //printf("Size %d\n",size(&s));
-            int j = s.items[s.top].index + 1;
             while(!isEmpty(&s)){
+                int j = s.items[s.top].currDeviation+s.items[s.top].index;
+                //printf("%d\n",j);
                 if(strcmp(primitives[j].type, "DOOP")==0){
                     printf("%05d: DOOP\n", time);
                     time += primitives[j].ticks;
                     doopTime +=  primitives[j].ticks;
                     doopCount++;
-                    j++;
+                    s.items[s.top].currDeviation++;
 
                 } else if(strcmp(primitives[j].type, "BLOCK")==0){
                     printf("%05d: BLOCK\n", time);
                     time += primitives[j].ticks;
                     blockTime +=  primitives[j].ticks;
                     blockCount++;
-                    j++;
+                    s.items[s.top].currDeviation++;
                 } else if(strcmp(primitives[j].type, "END")==0){
                     s.items[s.top].remainingIterations--;
                     if(s.items[s.top].remainingIterations==0){
+                        if(size(&s)>1){
+                            //for(int k=size(&s); k>0; k--){
+                                s.items[s.top-1].currDeviation=j;
+                            //}
+
+                        }
+//                        printf("true\n");
                         pop(&s);
                        // printf("%dHJKHFWRK", isEmpty(&s));
                         i=j;
 //                        printf("ohoy %d", i);
                         continue;
                     } else {
-                        j=s.items[s.top].index + 1;
+                        s.items[s.top].currDeviation=1;
                     }
+                }
+                else if(strcmp(primitives[j].type, "LOOP")==0){
+                    loopReference temp;
+                    temp.index = j;
+                    temp.remainingIterations=primitives[j].ticks;
+                    temp.currDeviation=1;
+                    push(&s,temp);
                 }
             }
         }
