@@ -99,27 +99,35 @@ int main() {
                 int j = s.items[s.top].currDeviation+s.items[s.top].index;
                 //printf("%d\n",j);
                 if(strcmp(primitives[j].type, "DOOP")==0){
-                    printf("%05d: DOOP\n", time);
+                    //printf("yoouuuuuu");
+
+                    //printf("yoRajjjouuuuuu");
                     time += primitives[j].ticks;
+                    //printf("yoRajjjouuuuuu");
                     doopTime +=  primitives[j].ticks;
                     doopCount++;
                     s.items[s.top].currDeviation++;
+//                    printf("yoo");
 
                 } else if(strcmp(primitives[j].type, "BLOCK")==0){
-                    printf("%05d: BLOCK\n", time);
+//                    printf("%05d: BLOCK\n", time);
+//                    printf("%d yuy\n",j);
                     time += primitives[j].ticks;
                     blockTime +=  primitives[j].ticks;
                     blockCount++;
                     s.items[s.top].currDeviation++;
                 } else if(strcmp(primitives[j].type, "END")==0){
+//                    printf("ahoyyy\n");
                     s.items[s.top].remainingIterations--;
                     if(s.items[s.top].remainingIterations==0){
                         if(size(&s)>1){
+//                            printf("UTL\n");
                             //for(int k=size(&s); k>0; k--){
-                            //printf("%d yuy\n",j);
-                            j++;
+
+//                            j++;
                                 s.items[s.top-1].currDeviation=j;
                             //}
+
 
                         }
 //                        printf("true\n");
@@ -128,7 +136,8 @@ int main() {
                         i=j;
 //                        printf("ohoy %d", i);
                         continue;
-                    } else {
+                    } else {//printf("\n*****%d y\n",j);
+
                         s.items[s.top].currDeviation=1;
                     }
                 }
