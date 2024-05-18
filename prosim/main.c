@@ -116,6 +116,8 @@ int main() {
                     if(s.items[s.top].remainingIterations==0){
                         if(size(&s)>1){
                             //for(int k=size(&s); k>0; k--){
+                            //printf("%d yuy\n",j);
+                            j++;
                                 s.items[s.top-1].currDeviation=j;
                             //}
 
