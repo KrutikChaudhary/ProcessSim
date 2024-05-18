@@ -92,7 +92,7 @@ int main() {
             reference.index = i;
             reference.remainingIterations=primitives[i].ticks;
             push(&s,reference);
-            printf("Size %d\n",size(&s));
+            //printf("Size %d\n",size(&s));
             int j = s.items[s.top].index + 1;
             while(!isEmpty(&s)){
                 if(strcmp(primitives[j].type, "DOOP")==0){
