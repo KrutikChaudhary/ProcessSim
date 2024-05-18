@@ -100,7 +100,7 @@ int main() {
                 //printf("%d\n",j);
                 if(strcmp(primitives[j].type, "DOOP")==0){
                     //printf("yoouuuuuu");
-
+                    printf("%05d: DOOP\n", time);
                     //printf("yoRajjjouuuuuu");
                     time += primitives[j].ticks;
                     //printf("yoRajjjouuuuuu");
@@ -110,7 +110,7 @@ int main() {
 //                    printf("yoo");
 
                 } else if(strcmp(primitives[j].type, "BLOCK")==0){
-//                    printf("%05d: BLOCK\n", time);
+                    printf("%05d: BLOCK\n", time);
 //                    printf("%d yuy\n",j);
                     time += primitives[j].ticks;
                     blockTime +=  primitives[j].ticks;
