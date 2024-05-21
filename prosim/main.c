@@ -117,7 +117,7 @@ int main() {
                     blockCount++;
                     s.items[s.top].currDeviation++;
                 } else if(strcmp(primitives[j].type, "END")==0){
-                    printf("ahoyyy\n");
+                    //printf("ahoyyy\n");
                     s.items[s.top].remainingIterations--;
                     if(s.items[s.top].remainingIterations==0){
                         if(size(&s)>1){
