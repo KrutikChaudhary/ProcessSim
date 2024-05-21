@@ -133,7 +133,7 @@ int main() {
 //                        printf("true\n");
                         pop(&s);
                        // printf("%dHJKHFWRK", isEmpty(&s));
-                       j++;
+
                         i=j;
 //                        printf("ohoy %d", i);
                         continue;
