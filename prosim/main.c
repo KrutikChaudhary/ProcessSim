@@ -124,7 +124,7 @@ int main() {
 //                            printf("UTL\n");
                             //for(int k=size(&s); k>0; k--){
 
-                           j++;
+                           //j++;
                            s.items[s.top-1].currDeviation=j;
                             //}
 
@@ -133,6 +133,7 @@ int main() {
 //                        printf("true\n");
                         pop(&s);
                        // printf("%dHJKHFWRK", isEmpty(&s));
+                       j++;
                         i=j;
 //                        printf("ohoy %d", i);
                         continue;
