@@ -125,7 +125,13 @@ int main() {
                             //for(int k=size(&s); k>0; k--){
 
                            //j++;
-                           s.items[s.top-1].currDeviation=j;
+                            //printf("UTL%d\n",j);
+                            if(strcmp(primitives[j+1].type, "END")==0){
+                                s.items[s.top-1].currDeviation=j;
+                            } else{
+                                s.items[s.top-1].currDeviation=j+1;
+                            }
+
                             //}
 
 
