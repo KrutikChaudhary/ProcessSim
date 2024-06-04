@@ -1,0 +1,23 @@
+Assignment 1 Feedback:
+
+Total Grade:   50  / 50
+
+General Comments: 
+Good work
+
+-----------------------------------------------------------
+Functionality:  20 / 20
+   Comments: 
+   - All passing!
+
+
+-----------------------------------------------------------
+Code Quality:  20 / 20
+   Comments: 
+
+
+-----------------------------------------------------------
+Code Clarity:  10 / 10
+  Comments: 
+  - Consider using switch statements instead of if-else
+  - Acceptable 
